@@ -11,7 +11,7 @@ const Form = () => {
     setError(null); // Clear any previous errors
 
     try {
-      const response = await axios.post('http://localhost:8080/convert', {
+      const response = await axios.post('https://sign-ease-backend.vercel.app/convert', {
         text: inputText, // Sending the text input to the Flask API
       });
       setOutputText(response.data.output); // Set the output from the API response
